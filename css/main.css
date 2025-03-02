@@ -287,6 +287,7 @@ h5 {
   font-weight: 400;
 }
 
+/* Box Styling */
 .hero-content .content-box {
   display: flex;
   flex-direction: column;
@@ -295,23 +296,27 @@ h5 {
   border: 2px solid black;
   padding: 20px;
   position: relative;
-  max-width: 800px; 
+  max-width: 800px;
   margin: 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Hero greeting and heading */
 .hero-content .hero-greeting, .hero-content .hero-heading {
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
-.hero-content .content-box::before, 
+.hero-content .content-box::before,
 .hero-content .content-box::after {
   content: '';
   position: absolute;
   top: 50%;
-  width: 40%; 
+  width: 40%;
   height: 1px;
   background-color: black;
+  transition: width 0.3s ease;
 }
 
 .hero-content .content-box::before {
@@ -320,6 +325,23 @@ h5 {
 
 .hero-content .content-box::after {
   right: -45%;
+}
+
+/* Hover Effect for the Content Box */
+.hero-content .content-box:hover {
+  transform: scale(1.02); /* Slightly enlarge the box */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Add a glowing effect */
+}
+
+
+/* Text Glow on Hover */
+.hero-content .hero-heading:hover {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6); /* Glowing effect */
+}
+
+.hero-content .hero-heading {
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 /* About section */

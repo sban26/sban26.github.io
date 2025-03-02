@@ -1,6 +1,13 @@
 @import "./reset.css";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
+@font-face {
+  font-family: 'raleway-light';
+  src: url('../fonts/raleway.light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --primary-bg-color: #f7fbfd;
   --primary-accent: #0c1618;
@@ -48,6 +55,11 @@ body {
   text-align: center;
   margin-bottom: 54px;
 }
+
+.title{
+  font-family: 'raleway-light';
+}
+
 
 .btn {
   display: inline-block;
@@ -100,6 +112,45 @@ body {
 .btn-white:active {
   background-color: #3c4446;
 }
+
+.about-sm-btn {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Space between buttons */
+  margin-top: 2.5%;
+}
+
+.about-sm-btn a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px; /* Size of the button */
+  height: 50px; /* Size of the button */
+  border-radius: 50%; /* Make the button circular */
+  background-color: #fff; /* Background color of the button */
+  color: #000; /* Icon color */
+  font-size: 24px; /* Size of the icon */
+  text-decoration: none; /* Remove underline from links */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition on hover */
+}
+
+.about-sm-btn a:hover {
+  background-color: #333; /* Hover background color for LinkedIn */
+  color: white; /* Icon color on hover */
+}
+
+.about-sm-btn a.fa-github:hover {
+  background-color: #333; /* Hover background color for GitHub */
+}
+
+.about-sm-btn a.fa-linkedin {
+  font-size: 28px; /* LinkedIn icon size */
+}
+
+.about-sm-btn a.fa-github {
+  font-size: 36px; /* GitHub icon size */
+}
+
 
 .btn-red {
   background: var(--secondary-accent);
@@ -207,9 +258,10 @@ h5 {
 }
 
 .hero-content {
-  text-align: left;
+  text-align: center;
   align-self: center;
   padding: 20px;
+  margin-top: 5%;
   flex-grow: 1;
 }
 
@@ -223,6 +275,8 @@ h5 {
 
 .hero-heading {
   margin: 5px 0;
+  font-family: 'raleway-light';
+  font-weight:bolder;
   font-weight: 500;
   font-size: clamp(3.25rem, 2.75rem + 2.5vw, 5rem);
   line-height: 1.2;
@@ -233,7 +287,7 @@ h5 {
   font-weight: 400;
 }
 
-.hero-img {
+/* .hero-img {
   display: flex;
   flex: 1 1 356px;
   justify-content: flex-end;
@@ -243,7 +297,7 @@ h5 {
 .hero-img img {
   display: block;
   position: relative;
-}
+} */
 
 .about-social-list {
   display: flex;
@@ -277,6 +331,7 @@ h5 {
 /* About section */
 .about {
   padding: 7rem 0;
+  
 }
 
 .about-row {

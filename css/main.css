@@ -307,23 +307,24 @@ h5 {
   position: relative;
 }
 
+/* the line */
 .hero-content .content-box::before,
 .hero-content .content-box::after {
   content: '';
   position: absolute;
   top: 50%;
-  width: 40%;
+  width: 35%;
   height: 1px;
   background-color: black;
   transition: width 0.3s ease;
 }
 
 .hero-content .content-box::before {
-  left: -45%;
+  left: -40%;
 }
 
 .hero-content .content-box::after {
-  right: -45%;
+  right: -39%;
 }
 
 /* Hover Effect for the Content Box */

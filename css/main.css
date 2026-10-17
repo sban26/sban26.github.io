@@ -459,7 +459,7 @@ h5 {
 
 .exp-container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   border-top: 2px solid #d8d8d8;
   margin-bottom: 30px; 
   padding:45px;
@@ -476,6 +476,84 @@ h5 {
   padding: 20px;
   color: #9c9b9b;
   font-size: 20px;
+}
+
+.exp-role {
+  display: inline-block;
+  color: var(--main-text-color);
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 16px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--secondary-accent);
+}
+
+.exp-description {
+  list-style: none;
+  margin: 0 0 20px;
+  padding: 20px 24px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--supportive-text-color);
+  background-color: var(--primary-bg-color);
+  border: 1px solid var(--gray-color);
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(12, 22, 24, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.exp-container:hover .exp-description {
+  transform: translateY(-3px);
+  border-color: rgba(111, 29, 27, 0.35);
+  box-shadow: 0 10px 28px rgba(111, 29, 27, 0.1);
+}
+
+.exp-description li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+}
+
+.exp-description li:last-child {
+  margin-bottom: 0;
+}
+
+.exp-description li::before {
+  content: "\f105";
+  font-family: FontAwesome;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--white-color);
+  background-color: var(--secondary-accent);
+  border-radius: 50%;
+}
+
+@media (max-width: 720px) {
+  .exp-container {
+    flex-direction: column;
+    padding: 25px 10px;
+  }
+
+  .exp-left-section,
+  .exp-right-section {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .exp-left-section {
+    font-size: 22px;
+  }
+
+  .exp-right-section {
+    font-size: 18px;
+  }
 }
 
 .exp-bottom{
@@ -1017,7 +1095,3 @@ svg {
 address {
   font-style: normal;
 }
-
-
-
-
